@@ -1,0 +1,214 @@
+@import url('https://fonts.cdnfonts.com/css/acumin-pro');
+
+.loan-container {
+    height: 100vh;
+    background: #e4e4e4;
+}
+
+.gtco {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 4%;
+    right: 4%;
+}
+
+/* Loan Header Section */
+
+#header-container {
+    width: 80%;
+}
+
+#loan-header {
+    background: hsla(18, 97%, 45%, 1);
+    height: 58px;
+    border-radius: 0px 120px 0px 0px;
+}
+
+.calculator {
+    width: 64px;
+    height: 58px;
+}
+
+.loan-container h1 {
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    padding-left: 16px;
+}
+
+.loan-cona {
+    height: auto;
+    background: #fff;
+    padding: 50px 20px 0px 10px;
+    width: 100%;
+}
+
+.loan-conb {
+    padding: 0px 10px 0px 10px;
+    width: 45%;
+}
+
+
+.loan-conb label {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0em;
+    line-height: 40px;
+    padding-right: 80px;
+}
+
+.loan-span p {
+    background: hsla(0, 4%, 84%, 1);
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.loan-span .input-amount {
+    width: 140px;
+    height: 40px;
+    outline: none;
+    border: 3px solid hsla(0, 4%, 84%, 1);
+}
+
+.loan-spanb select {
+    background: hsla(0, 4%, 84%, 1);
+    height: 40px;
+    width: 90px;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+.loan-conf select {
+    background: #fff;
+    height: 40px;
+    border: 3px solid hsla(0, 4%, 84%, 1);
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.loan-spanc p {
+    background: hsla(0, 4%, 84%, 1);
+    height: 40px;
+    width: 90px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.loan-spanb .input-term, .loan-spanc .input-term {
+    width: 90px;
+    height: 40px;
+    outline: none;
+    border: 3px solid hsla(0, 4%, 84%, 1);
+}
+
+.loan-button button {
+    width: 180px;
+    height: 40px;
+    outline: none;
+}
+
+.loan-butta {
+    background: #fff;
+    color:hsla(18, 97%, 45%, 1);
+    border: 2px solid  hsla(18, 97%, 45%, 1);
+    border-radius: 4px;
+}
+
+.loan-buttb {
+    background: hsla(18, 97%, 45%, 1);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.loan-toggle p {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    position: relative;
+    top: 5px;
+}
+
+.loan-toggle #toggleoff {
+    width: 30px;
+    height: 14px;
+}
+
+.toggle-image {
+    transition: transform 0.3s ease;
+}
+
+.loan-conc {
+    width: 55%;
+    padding: 0px 10px 0px 50px;
+}
+
+.loan-concc {
+    border-radius: 0px 120px 120px 0px;
+    border: 1px solid hsla(0, 4%, 84%, 1);
+    background: #FFF;
+    padding: 0px 30px;
+    height: 275px;
+}
+
+.dot {
+    border-bottom: 1px dotted hsla(0, 4%, 84%, 1);   
+}
+
+.loan-concc h3 {
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    padding-top: 10px;
+}
+
+.loan-concc select {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    background: #fff;
+    height: 40px;
+    border: 1px solid hsla(0, 4%, 84%, 1);
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.loan-concc p {
+    text-align: center;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+
+.bg-line {
+    background: #fff;
+    padding: 50px 10px 30px 10px;
+}
+
+.line {
+    background: #E04403;
+    height: 3px;
+}
+
+.rate-space {
+    padding: 10px;
+}
+
+.error {
+    color: red;
+    font-size: 18px;
+    background: #fff;
+    font-style: italic;
+    padding-top: 5px;
+}
