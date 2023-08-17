@@ -119,10 +119,23 @@
     border-radius: 4px;
 }
 
+.loan-butta:hover, .loan-butta:active{
+    background: hsla(18, 97%, 45%, 1);
+    color: #fff;
+    border: none; 
+}
+
 .loan-buttb {
     background: hsla(18, 97%, 45%, 1);
     color: #fff;
     border: none;
+    border-radius: 4px;
+}
+
+.loan-buttb:hover, .loan-buttb:active{
+    background: #fff;
+    color:hsla(18, 97%, 45%, 1);
+    border: 2px solid  hsla(18, 97%, 45%, 1);
     border-radius: 4px;
 }
 
