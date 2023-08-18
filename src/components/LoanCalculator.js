@@ -235,16 +235,16 @@ switch (true) {
             />
             <h1>Loan Interest Rate Calculator</h1>
         </div>
-        <div className="loan-cona d-flex flex-row">
+        <div className="loan-cona d-md-flex flex-md-row">
             <div className="loan-conb">
-                <div className='d-flex flex-row align-items-center justify-content-between'>
+                <div className='d-md-flex flex-md-row align-items-md-center justify-content-md-between'>
                     <label>Total Loan</label>
                     <span className="loan-span d-flex flex-row">
                         <p>₦</p>
                         <input type="number" className="input-amount" value={loanAmount} onChange={e => setLoanAmount(e.target.value)} />
                     </span>
                 </div>
-                <div className='d-flex flex-row align-items-center justify-content-between'>
+                <div className='d-md-flex flex-md-row align-items-md-center justify-content-md-between'>
                     <label>Duration</label>
                     <span className="loan-spanb d-flex flex-row">
                         <input type="number" className="input-term" value={loanTerm} onChange={e => setLoanTerm(e.target.value)} />
@@ -266,7 +266,7 @@ switch (true) {
                     />
                 </div>)}
                 {rateToggled ? 
-                (<div className='d-flex flex-row align-items-center justify-content-between'>
+                (<div className='d-md-flex flex-md-row align-items-md-center justify-content-md-between'>
                 <label>Amount to Repay</label>
                 <span className="loan-span d-flex flex-row">
                     <p>₦</p>
@@ -275,7 +275,7 @@ switch (true) {
                 </div>
                 ) : ( isToggled ? (
                     <div className="content-on loan-conf">
-                        <div className='d-flex flex-row align-items-center justify-content-between'>
+                        <div className='d-md-flex flex-md-row align-items-md-center justify-content-md-between'>
                         <label>Loan Type </label>
                         <select value={loanType} onChange={e => setLoanType(e.target.value)}>
                         <option value="">Select an option</option>
@@ -294,7 +294,7 @@ switch (true) {
                     </div>
                 ) : (
                     <div className="content-off">
-                        <div className='d-flex flex-row align-items-center justify-content-between'>
+                        <div className='d-md-flex flex-md-row align-items-md-center justify-content-md-between'>
                         <label>Interest Rate p.a </label>
                         <span className="loan-spanc d-flex flex-row">
                             <input type="number" className="input-term" value={interestRate} onChange={e => setInterestRate(e.target.value)} />
@@ -303,7 +303,7 @@ switch (true) {
                         </div>
                     </div>
                 ))}
-                <div className='loan-button d-flex flex-row align-items-center justify-content-between'>
+                <div className='loan-button d-md-flex flex-md-row align-items-md-center justify-content-md-between'>
                     <button className='loan-butta' onClick={calculateRate}>FIND INTEREST RATE</button>
                     <button className='loan-buttb' onClick={calculateLoan}>CALCULATE</button>
                 </div>

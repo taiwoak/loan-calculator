@@ -117,6 +117,7 @@
     color:hsla(18, 97%, 45%, 1);
     border: 2px solid  hsla(18, 97%, 45%, 1);
     border-radius: 4px;
+    transition: 0.3s;
 }
 
 .loan-butta:hover, .loan-butta:active{
@@ -130,6 +131,7 @@
     color: #fff;
     border: none;
     border-radius: 4px;
+    transition: 0.3s;
 }
 
 .loan-buttb:hover, .loan-buttb:active{
@@ -224,4 +226,133 @@
     background: #fff;
     font-style: italic;
     padding-top: 5px;
+}
+
+@media (max-width: 575px) {
+    .gtco {
+        width: 40px;
+        height: 40px;
+        top: 2%;
+    }
+
+    .loan-container {
+        padding-top: 70px;
+        height: auto;
+    }
+    #loan-header {
+        height: 43px;
+    }
+    
+    .calculator {
+        width: 48px;
+        height: 43px;
+    }
+    
+    .loan-container h1 {
+        font-size: 16px;
+        padding-left: 16px;
+    }
+
+    .loan-cona {
+        padding: 30px 10px 0px 10px;
+    }
+    
+    .loan-conb {
+        padding: 0px 20px 0px 20px;
+        width: 100%;
+    }
+    
+    
+    .loan-conb label {
+        font-size: 18px;
+        line-height: 40px;
+        padding-right: 0px;
+    }
+
+    .loan-span p {
+        height: 40px;
+        width: 30%;
+    }
+    
+    .loan-span .input-amount {
+        width: 70%;
+        height: 40px;
+    }
+
+    .loan-spanb select {
+        background: hsla(0, 4%, 84%, 1);
+        height: 40px;
+        width: 50%;
+        text-align: center;
+        font-size: 16px;
+        border: none;
+        outline: none;
+    }
+    
+    .loan-conf select {
+        background: #fff;
+        height: 40px;
+        width: 100%;
+        border: 3px solid hsla(0, 4%, 84%, 1);
+        outline: none;
+        margin-bottom: 20px;
+    }
+    
+    .loan-spanc p {
+        background: hsla(0, 4%, 84%, 1);
+        height: 40px;
+        width: 50%;
+        text-align: center;
+        font-size: 24px;
+    }
+    
+    .loan-spanb .input-term, .loan-spanc .input-term {
+        width: 50%;
+        height: 40px;
+        outline: none;
+        border: 3px solid hsla(0, 4%, 84%, 1);
+    }
+    
+
+    .loan-toggle {
+        width: 100%;
+    }
+    
+    .loan-toggle p {
+        font-size: 14px;
+        font-style: italic;
+        font-weight: 400;
+        position: relative;
+        top: 8px;
+    }
+    
+
+    .content-off {
+        margin-bottom: 10px;
+    }
+
+    .loan-button button {
+        width: 100%;
+    }
+
+    .loan-butta, .loan-buttb {
+        margin-bottom: 10px;
+    }
+
+    .loan-conc {
+        width: 100%;
+        padding: 30px 20px 0px 20px;
+    }
+    
+    .loan-concc {
+        border-radius: 0px 0px 120px 120px;
+        border: 1px solid hsla(0, 4%, 84%, 1);
+        background: #FFF;
+        padding: 20px 30px;
+        height: auto;
+    }
+
+    .loan-container {
+        padding-bottom: 50px;
+    }
 }
