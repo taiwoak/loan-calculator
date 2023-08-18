@@ -152,6 +152,7 @@
 .loan-toggle #toggleoff {
     width: 30px;
     height: 14px;
+    transition: 0.3s;
 }
 
 .toggle-image {
@@ -167,8 +168,8 @@
     border-radius: 0px 120px 120px 0px;
     border: 1px solid hsla(0, 4%, 84%, 1);
     background: #FFF;
-    padding: 0px 30px;
-    height: 275px;
+    padding: 10px 30px 20px 30px;
+    height: 290px;
 }
 
 .dot {
@@ -186,7 +187,6 @@
 .loan-concc select {
     display: block;
     margin: 0 auto;
-    margin-top: 10px;
     background: #fff;
     height: 40px;
     border: 1px solid hsla(0, 4%, 84%, 1);
@@ -204,7 +204,9 @@
     font-weight: 400;
 }
 
-
+.mob p {
+    padding-top: 5px;
+}
 
 .bg-line {
     background: #fff;
@@ -251,6 +253,7 @@
     .loan-container h1 {
         font-size: 16px;
         padding-left: 16px;
+        padding-top: 6px;
     }
 
     .loan-cona {
@@ -272,6 +275,8 @@
     .loan-span p {
         height: 40px;
         width: 30%;
+        font-size: 20px;
+        line-height: 40px;
     }
     
     .loan-span .input-amount {
@@ -303,7 +308,8 @@
         height: 40px;
         width: 50%;
         text-align: center;
-        font-size: 24px;
+        font-size: 20px;
+        line-height: 40px;
     }
     
     .loan-spanb .input-term, .loan-spanc .input-term {

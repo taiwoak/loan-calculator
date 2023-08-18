@@ -21,6 +21,7 @@ const LoanCalculator = () => {
   const [monthlyPayment, setMonthlyPayment] = useState(0);
   const [loanTermType, setLoanTermType] = useState('---'); 
   const [findIntRate, setFindIntRate] = useState(0); 
+  const [loanIntRate, setLoanIntRate] = useState(0); 
   const [rateTotal, setRateTotal] = useState(0); 
   const [rateTermType, setRateTermType] = useState('---'); 
   const [error, setError] = useState(null);
@@ -35,6 +36,7 @@ const LoanCalculator = () => {
     setRepaymentOptions('month');
     setLoanTermType('---');
     setFindIntRate(0);
+    setLoanIntRate(0);
     setRateTotal(0);
     setRateTermType('---');
     setInterestRate('');
@@ -128,6 +130,7 @@ switch (true) {
     case !!loanType:
         if (predefinedInterestRates[loanType]) {
             const predefinedInterestRate = predefinedInterestRates[loanType] / 100;
+            const gtcoInterestRate = predefinedInterestRates[loanType]
             const parsedTypeInterestRate = parseFloat(predefinedInterestRate);
         if ( dateType === "year") { 
             interestAmount = parsedAmount * parsedTypeInterestRate * parsedLoanTerm;    
@@ -142,11 +145,11 @@ switch (true) {
                     monthlyAmount = totalAmount / (parsedLoanTerm * 1);
                 }
     
-            if (parsedLoanTerm === 1) {
-                setLoanTermType(parsedLoanTerm + ' Year');
-            } else {
-                setLoanTermType(parsedLoanTerm + ' Years');
-            }
+            // if (parsedLoanTerm === 1) {
+            //     setLoanTermType(parsedLoanTerm + ' Year');
+            // } else {
+            //     setLoanTermType(parsedLoanTerm + ' Years');
+            // }
     
         } else {
             interestAmount = parsedAmount * parsedTypeInterestRate * parsedLoanTermMonths;
@@ -161,12 +164,13 @@ switch (true) {
                     monthlyAmount = totalAmount / (parsedLoanTermMonths * 1);
                 }
     
-            if (parsedLoanTerm === 1) {
-                setLoanTermType(parsedLoanTerm + ' Month');
-            } else {
-                setLoanTermType(parsedLoanTerm + ' Months');
-            }
+            // if (parsedLoanTerm === 1) {
+            //     setLoanTermType(parsedLoanTerm + ' Month');
+            // } else {
+            //     setLoanTermType(parsedLoanTerm + ' Months');
+            // }
         }
+        setLoanIntRate(gtcoInterestRate);
       } else {
         setError('Invalid Loan Type.');
         return;
@@ -304,7 +308,7 @@ switch (true) {
                     </div>
                 ))}
                 <div className='loan-button d-md-flex flex-md-row align-items-md-center justify-content-md-between'>
-                    <button className='loan-butta' onClick={calculateRate}>FIND INTEREST RATE</button>
+                    <button className='loan-butta' onClick={calculateRate}>{rateToggled ? "FIND LOAN RATE" : "FIND INTEREST RATE"}</button>
                     <button className='loan-buttb' onClick={calculateLoan}>CALCULATE</button>
                 </div>
                 {error && <Error message={error} />}
@@ -326,7 +330,7 @@ switch (true) {
                     </div>
                 </div>) :
                     (<div className='loan-concc'>
-                    <div className='loan-cond dot'>
+                    <div className='loan-cond dot mob'>
                         {/* <h3>Monthly Repayment</h3> */}
                         <select value={repaymentOptions} onChange={e => setRepaymentOptions(e.target.value)}>
                         <option value="month">Monthly Repayment</option>
@@ -341,8 +345,8 @@ switch (true) {
                         <p>₦{totalRepayment}</p>
                     </div>
                     <div className='loan-cond'>
-                        <h3>Loan Term</h3>
-                        <p>{loanTermType} </p>
+                        <h3>{isToggled ? "Interest Rate p.a" : "Loan Term"}</h3>
+                        <p>{isToggled ? loanIntRate  + '%' : loanTermType} </p>
                     </div>
                 </div>)}
                  
