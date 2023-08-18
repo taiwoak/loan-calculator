@@ -33,7 +33,6 @@ const LoanCalculator = () => {
     setTotalRepayment(0);
     // setTotalInterest(0);
     setMonthlyPayment(0);
-    setRepaymentOptions('month');
     setLoanTermType('---');
     setFindIntRate(0);
     setLoanIntRate(0);
@@ -201,14 +200,13 @@ switch (true) {
       setFindIntRate((interestAmount * 100).toFixed(2));
       setError(null);
       return;
-
+  
     default:
       setError('Interest Rate or Loan Type is required.');
       return;
   }  
   
     setTotalRepayment(totalAmount.toFixed(2));
-    // setTotalInterest(interestAmount.toFixed(2));
     setMonthlyPayment(monthlyAmount.toFixed(2));
     setError(null);
 
@@ -332,7 +330,7 @@ switch (true) {
                     (<div className='loan-concc'>
                     <div className='loan-cond dot mob'>
                         {/* <h3>Monthly Repayment</h3> */}
-                        <select value={repaymentOptions} onChange={e => setRepaymentOptions(e.target.value)}>
+                        <select value={repaymentOptions} onChange={(e) => {setRepaymentOptions(e.target.value)}}>
                         <option value="month">Monthly Repayment</option>
                         <option value="quarter">Quarterly Repayment</option>
                         <option value="biannual">Biannually Repayment</option>
